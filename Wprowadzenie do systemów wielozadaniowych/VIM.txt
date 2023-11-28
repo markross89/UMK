@@ -1,0 +1,5 @@
+1  :wq     -     :x
+2  latin1  -   :set fileencoding=utf8 (zmiana kodowania nie zmienia istniejących znaków na poprawne, ale sprawia że nowo dodane będą poprawne)
+3  :g/^\s*$/d
+4  :set tabstop=4
+5  :%s/desc/opis/g
