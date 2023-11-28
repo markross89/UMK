@@ -1,0 +1,42 @@
+			
+			PART I
+
+
+1  cat /etc/resolv.conf | grep nameserver | wc -l
+2  cat /etc/hosts | grep ultra60.mat.umk.pl | cut -w -f 1
+3  cat | who | grep markross89
+4  cat /etc/hosts | grep 158.75.2. | wc -l
+5  echo -n "id -u markross89:" ; echo "id -g markross89"       echo "id -u markross89:" ; echo "id -g markross89"
+6  groups <markross89>
+7  cat | ps -aux -o cmd | sort -rg | head --lines=5
+
+
+
+
+                      PART II
+
+1   w³¹czenie mcedit vim i top w tle
+26586 pts/17   00:00:00 bash
+30923 pts/17   00:00:00 mcedit
+30964 pts/17   00:00:00 vim
+31095 pts/17   00:00:00 top
+31171 pts/17   00:00:00 ps
+
+2  kill -9 30964   - zabicie procesu vim
+
+26586 pts/17   00:00:00 bash
+30923 pts/17   00:00:00 mcedit
+31095 pts/17   00:00:00 top
+31630 pts/17   00:00:00 ps
+[2]-  Killed                  vim
+
+3  sprawdzenie jobs - procesy dzialajace w tle
+
+[1]-  Stopped                 mcedit
+[2]+  Stopped                 top
+
+4  fg top - przeniesienie programu top z background do foreground
+
+[1]+  Stopped                 mcedit
+
+5 brak programu mcedit w tle po wylogowaniu i ponownym zalogowaniu
