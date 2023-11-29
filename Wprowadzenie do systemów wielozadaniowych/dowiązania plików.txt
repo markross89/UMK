@@ -1,0 +1,26 @@
+1.
+a) mkdir WdSW && cd $_           tworze folder i wchodze do niego
+   vim tekst.txt                 tworze plik tekstowy za pomoca programu vim 
+   i - for insert mode           wchodze w tryb edycj i edytuje tekst 
+   esc:wq - to save file         zmieniam tryb, zapisuje plik i wychodze z vima
+   cp tekst.txt tekst.bak        tworze kopie pliku tekstowego
+b) ln tekst.txt tekst_symb       tworze link symboliczny pliku tekstowego
+   file text_symb                file zwraca rodzaj pliku: symbolic link to tekst.txt
+c) vim tekst_symb                otwieram link za pomoca vima i zmieniam jego zawartosc
+   vim tekst.txt		 sprawdzam zawartosc oryginalnego pliku tekstowego - edycja wywolana przez link symboliczny 
+				 zostala rowniez wprowadzona w oryginalnym pliku
+d) rm tekst.txt			 usuwam oryginalny plik tekstowy
+   vim tekst_symb                otwieram link, ale zawartość to nowy pusty dokument, jeśli dokument zostanie zapisany przed wyjsciem
+				 z vima, to bedzie to nowy plik o nazwie usunietego wczesniej pliku tekstowego.
+e) rm tekst_symb                 usuwam link
+
+2.
+a) mv tekst.bak tekst            zmieniam nazwe pliku
+b) ln tekst tekst_dow		 tworze dowiazanie zwykle
+   file tekst			 file zwraca rodzaj pliku: ASCII text
+c) vim tekst_dow		 otwieram link za pomaca vim i edytuje go tekst
+   vim tekst			 plik oryginalny został zmieniony wraz z plikiem dowiazania
+d) rm tekst			 usuwam plik tekst
+   vim tekst_dow		 plik pozostaje niezmieniony mimo usuniecia pliku oryginalnego
+   rm tekst_dow			 usuwam dowiazanie
+
