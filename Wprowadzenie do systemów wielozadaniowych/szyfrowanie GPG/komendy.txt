@@ -1,0 +1,5 @@
+gpg --gen-key
+gpg --export -a 7FF2E557B50CE2A4977FC49AF61B90B5B1052703 > public_key.key
+gpg --export-secret-key -a 7FF2E557B50CE2A4977FC49AF61B90B5B1052703 > private_key.key
+vim textFile.txt
+gpg --sign --armor -r markross89.mat.umk.pl textFile.txt

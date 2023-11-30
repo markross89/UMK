@@ -1,0 +1,59 @@
+man           dokumentacja danego programu
+
+finger        informacje o uzytkownikach
+
+pwd           print working directory
+
+ls             list names of files in current directory
+   ls -l       		        list names and extra data about the files in current folder including permissions
+   ls -li	                list what ls -l list plus node id 
+
+mkdir <name>                      create a folder
+   mkdir <name> && cd $_          create a folder and move to it $_ - stands for argument used in last method in this case NAME
+
+cp <name> <name of copy>	                   copy file or directory
+
+mv <name> <path/new name>           rename a file or move it to diff directions if new name not added
+
+rmdir <name>       removes empty directories
+
+rm <name>		removes files including empty directories
+
+rm -r <name>          removes files and not empty directories with it's content
+
+touch <name>          create a file/ multiple files
+
+> <name>                   create a new file or overwrite existing one 
+   cat <name> > <name>         create a new file or ovewrite existing one with first file content
+   cat <name> >> <name>          create a new file or append first file content to existing file
+
+echo <"string"> > <name> / echo <"string"> >> <name>       it appends (>>) or overwrites (>) string to file
+
+ps               shows processes fro curent shell
+
+ps -x            show all processes run by user
+
+ps -aux          show processes run by all users, all terminals full details
+
+grep <string>    looks for lines containing specific string
+    grep -n <string> <file>   result lines are numbered
+    grep -c <string> <file>  return count of lines we looking for
+    grep -i <string> <file>   result without case sensitivity
+    grep <string> *      looking for a string in all files in a folder
+    grep -r <string> <begining path>  look for a string in all files and folders starting from the specified path
+    grep --color '<string>\|<string>'     looking for all lines containing one of the two strings and mark occurance with diff color
+    grep <string> | grep <string>      looking for lines with specific string, and than in this result lines with another string 
+                                        result is only lines where two strings occures
+
+cut -c 1 <file>           cuts first letter of the file
+    cut -c 3,4,5-8,9,10 <file>    cuts specific letters and range 5-8
+    cut -d " " -f 1,2 <file>      sets delimiter -d to " " single space (if no delimiter is set, cut use tab as default)
+                                  and treats every word separated with space as a separate field, and prints first and second fields
+    cut -w -f 1 <file>        cuts first field of the file, -w means that multiple whitespaces or tab are used as a delimiter
+
+uniq           returns uniqe values, used with cat
+
+echo <"string">       return string to console
+
+tr -s "<char>"       used to remove all 
+
