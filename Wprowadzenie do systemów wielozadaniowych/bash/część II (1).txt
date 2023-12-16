@@ -1,0 +1,5 @@
+aby zmienic znak zachety wystarczy zmienic wartosc zmiennej PS1 np.
+
+[\u@\h \W]$       na          [\u@\h \W]> 
+
+teraz znak '$' zostanie zastapiony przez '>'

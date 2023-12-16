@@ -1,0 +1,7 @@
+1. XYZ=$USER:$HOSTNAME   -   markross89:ultra60
+2. unset XYZ
+3. vim .bash_login    -  export PS1='[\u@\h \W]>'     
+                         export LANG='pl_PL.ISO8859-2'
+4. set
+5. $HOME
+6. $SHELL
