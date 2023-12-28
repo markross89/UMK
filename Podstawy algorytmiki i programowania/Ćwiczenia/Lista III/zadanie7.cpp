@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
 unsigned int toDec(string num);
 string toHex(unsigned int dec);
-int power(int a, int b);
 
 main()
 {
@@ -32,11 +32,11 @@ unsigned int toDec(string num)
     {
         if(num[i]-'0' < 10)
         {
-            decimal += (num[i]-'0') * power(16, num.length()-i-1);
+            decimal += (num[i]-'0') * pow(16, num.length()-i-1);
         }
         else
         {
-            decimal += (num[i]+10-'A') * power(16, num.length()-i-1);
+            decimal += (num[i]+10-'A') * pow(16, num.length()-i-1);
         }
     }
     return decimal;
@@ -60,15 +60,4 @@ string toHex(unsigned int dec)
         dec /= 16;
     }
     return hex;
-}
-
-int power(int a, int b)
-{
-    int result = 1;
-
-    for(int i = 0; i < b; i++)
-    {
-        result *= a;
-    }
-    return result;
 }

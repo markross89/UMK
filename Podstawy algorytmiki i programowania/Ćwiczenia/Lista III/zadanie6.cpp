@@ -1,12 +1,11 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 unsigned int toDec(string num, unsigned int baseSys);
 
 string fromDec(unsigned int dec, unsigned int finalSys);
-
-int power(int a, int b);
 
 main()
 {
@@ -34,7 +33,7 @@ unsigned int toDec(string num, unsigned int baseSys)
 
     for(int i = 0; i < num.length(); i++)
     {
-        dec += (num[(num.length()-1)-i] - '0') * power(baseSys, i);
+        dec += (num[(num.length()-1)-i] - '0') * pow(baseSys, i);
     }
     return dec;
 }
@@ -52,13 +51,3 @@ string fromDec(unsigned int dec, unsigned int finalSys)
     return num;
 }
 
-int power(int a, int b)
-{
-    int result = 1;
-
-    for(int i = 0; i < b; i++)
-    {
-        result *= a;
-    }
-    return result;
-}
