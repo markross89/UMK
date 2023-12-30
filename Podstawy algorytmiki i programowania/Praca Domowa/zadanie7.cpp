@@ -3,7 +3,7 @@
 using namespace std;
 
 int newton(int n, int k);
-int factorial(int n);
+// int factorial(int n);
 
 main()
 {
