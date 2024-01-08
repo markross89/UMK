@@ -1,0 +1,41 @@
+1. #!/bin/bash
+
+   while [ true ]
+   do
+
+     echo "please type address of the file"
+     read condition
+
+     if [ $condition = "koniec" ]
+     then
+        break
+     else
+        wget $condition
+     fi
+   done
+
+
+2. #!/bin/bash
+
+   if (($# != 1))
+   then
+       echo something is wrong
+   else
+       DIRECTORIES=`ls -l $1 | grep "^d" | wc -l | tr -s " "`
+       FILES=`ls -l $1 | grep -v "^d" | wc -l | tr -s " "`
+       echo "W podanym katalogu jest $(($FILES - 1)) plikow i $DIRECTORIES katalogow"
+   fi
+
+
+3. #!/bin/bash
+
+   NUM=`cat $1 | wc -l | sed 's/^*//g'`
+   RAND=$((1 + RANDOM % $NUM))
+   echo "Message of the day: `sed -n ${RAND}p $1`"
+
+
+   # aby losowaæ wiadomoœæ przy ka¿dym logowaniu nale¿y zmodyfikowaæ skrypt tak ¿eby Scie¿ka do pliku by³a sta³¹ wartoœci¹ a nie argumentem 
+     podawanym przy starcie skryptu, a potem umieœciæ œcie¿kê do tego skryptu w 
+     folderze .bash_login (czasami .bash_profil lub .profil w innych wersjach). 
+
+

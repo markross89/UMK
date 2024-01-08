@@ -1,0 +1,28 @@
+1.  #!/bin/bash                                             
+    echo "$1"   -   chmod +x displayVariable.sh
+2.  #!/bin/bash 
+    echo $(($1*$2))   -    chmod +x add
+3.  #!/bin/bash
+    ps aux -U $1 | sort -k 4 -r    -     chmod +x name.sh
+    echo $1     # wypisuje wartoœæ zmiennej 
+    echo "$1"    # wypisuje wartoœæ zmiennej
+    echo '$1'    # wypisuje nazwe zmiennej czyli $1 
+4.  #!/bin/bash 
+    echo "first" $1
+    echo "last" ${@: -1}
+    echo "count" $#
+5. #!/bin/bash
+
+   if [ -e .cshrc ]; then
+        echo "plik .cshrc znajduje sie w twoim katalogu domowym"
+   else
+        echo "Nie masz pliku .cshrc !"
+   fi
+6. #!/bin/bash
+
+   read -p 'podaj dwie liczby naturalne ' num1 num2
+   echo "roznica  $(($num1 - $num2))"
+   echo "iloraz  $(($num1 * $num2))"
+   echo "czesc calkowita dzielenia $(($num1 / $num2))"
+   echo "reszta z dzielenia $(($num1 % num2))"
+
