@@ -4,7 +4,6 @@ using namespace std;
 
 int main(){
 
-
     int a, b;
 
     cout << "Please, enter value of a" << endl;
