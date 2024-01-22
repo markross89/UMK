@@ -14,7 +14,7 @@ int main(){
 
     int power = a;
 
-    for (int i = 1; i < b; i++){
+    for (int i = 1; i <= b; i++){
 
         power *= a;
 
