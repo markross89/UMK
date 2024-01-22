@@ -18,14 +18,11 @@ main()
     return 0;
 }
 
-int power(int n, int p){
-
-    int result;
-
-    if(p != 0){
-        result += n*power(n, p-1);
-    }else{
+int power(int a, int b)
+{
+    if(b == 0)
+    {
         return 1;
     }
-    return result;
+    return a*power(a, b-1);
 }
